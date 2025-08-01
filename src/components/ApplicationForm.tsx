@@ -77,13 +77,11 @@ export default function ApplicationForm({ darkMode }: ApplicationFormProps) {
               <label className={`block text-sm font-bold mb-3 ${
                 darkMode ? 'text-white' : 'text-cypec-slate-900'
               }`}>
-                Age *
+                Date of Birth *
               </label>
               <input
-                type="number"
-                name="age"
-                min="13"
-                max="18"
+                type="date"
+                name="dateOfBirth"
                 required
                 className={`w-full px-4 py-3 rounded-xl border-2 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cypec-primary-500 focus:scale-[1.02] ${
                   darkMode 
