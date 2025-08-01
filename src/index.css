@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .cypec-gradient {
+    @apply bg-gradient-to-br from-cypec-primary-500 to-cypec-primary-800;
+  }
+  
+  .cypec-text-gradient {
+    @apply bg-gradient-to-r from-cypec-primary-400 to-cypec-primary-600 bg-clip-text text-transparent;
+  }
+  
+  .cypec-shadow {
+    box-shadow: 0 10px 25px -5px rgba(12, 140, 233, 0.1), 0 10px 10px -5px rgba(12, 140, 233, 0.04);
+  }
+  
+  .cypec-shadow-dark {
+    box-shadow: 0 10px 25px -5px rgba(12, 140, 233, 0.2), 0 10px 10px -5px rgba(12, 140, 233, 0.1);
+  }
+  
+  .glass-effect {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl;
+  }
+  
+  .btn-primary {
+    @apply cypec-gradient text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 cypec-shadow hover:cypec-shadow-dark;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-cypec-primary-500 text-cypec-primary-500 px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:bg-cypec-primary-500 hover:text-white;
+  }
+}
